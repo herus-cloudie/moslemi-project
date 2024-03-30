@@ -1,0 +1,135 @@
+img[alt='comment']
+{
+    z-index: -1;
+    right: 22rem;
+    top: -2rem;
+}
+.rulls
+{
+    direction: rtl;
+}
+.rulls > li::marker
+{
+    content:url('../../../public//img/play.png');
+    background-size: 1px;
+}
+.Product-carsoule
+{
+    width: calc(33.333%);
+}
+.carsoule-parent
+{
+    width: 40rem;
+}
+.swiper-button-next::after
+{
+    content: 'prev' !important;
+    font-size:  0.7rem !important;
+    color: #000000;
+    background-color: rgb(200, 200, 200);
+    padding: 0.5rem;
+    border-radius: 50%;
+}
+.swiper-button-prev::after
+{
+    content: 'next' !important;
+    font-size:  0.7rem !important;
+    color: #000000;
+    background-color: rgb(200, 200, 200);
+    padding: 0.5rem;
+    border-radius: 50%;
+}
+.btn-telegram:hover
+{
+    color: #009dff;
+    background-color: #fff;
+}
+
+@media (max-width:425px)
+{
+    .carsoule-parent
+    {
+        width: 15rem;
+    }
+    img[alt='comment']
+    {
+        top: 3rem;
+        right: 0rem;
+        width: 20rem;
+    }
+    .swiper-slide
+    {
+        width: 100% !important;
+    }
+}
+
+@media(min-width:1536px)
+{
+    .carsoule-parent
+    {
+        width: 60rem;
+    }
+}
+
+
+@media(min-width:2000px)
+{
+    .Product-text
+    {
+        font-size: 2rem;
+        line-height: 5rem;
+    }
+    img[alt='comment']
+    {
+        right: 60rem;
+        top: -6rem;
+        width: 50rem;
+    }
+    img[alt='postIMg']
+    {
+        width: 30rem;
+        height: 30rem;
+    }
+    .carsoule-parent
+    {
+        width: 100rem;
+    }
+    .suggest-title
+    {
+        font-size: 1.5rem !important;
+        color: #464646;
+        line-height: 4rem;
+    }
+    .suggest-text
+    {
+        line-height: 3rem;
+    }
+    .swiper-button-next::after
+    {
+        font-size:  1rem !important;
+        margin-left: 5rem;
+        padding: 0.7rem;
+    }
+    .swiper-button-prev::after
+    {
+        font-size:  1em !important;
+        margin-right: 5rem;
+        padding: 0.7rem;
+    }
+    .rulls > li::marker
+    {
+        content: none;
+    }
+    .tagsIcon
+    {
+        transform: scale(3);
+    }
+    .documentImg
+    {
+        transform: scale(3);
+    }
+    .linkImg
+    {
+        transform: scale(4);
+    }
+}

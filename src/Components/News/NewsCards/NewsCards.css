@@ -1,0 +1,28 @@
+.spinner
+{
+   animation: rotate 50s  ease-out infinite;
+}
+@keyframes rotate {
+    0%{transform: rotate(0deg);}
+    100%{transform: rotate(10000deg)}
+}
+
+@media(min-width:2000px)
+{
+    .new
+    {
+        width: 18%;
+    }
+}
+
+@media(min-width:2100px)
+{
+    .new
+    {
+        width: 13%;
+    }
+    .news
+    {
+        gap:5rem 1rem ;
+    }
+}

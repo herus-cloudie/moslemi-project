@@ -1,0 +1,25 @@
+.gallery_box 
+{
+    position: relative;
+    height: 100%;
+  }
+  
+.gallery_box 
+{
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    padding: 0;
+  }
+  
+.gallery_box > .swiper 
+  {
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 50px;
+  }
+ .swiper-slide-shadow-right
+ {
+  background-image: none !important;
+ }
