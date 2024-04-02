@@ -18,9 +18,10 @@ function HeaderNavbar() {
   const workSampleCategories = useSelector(
     (state) => state.dashboard.workSampleCategories
   );
-  
+
   // const roleId = JSON.parse(Cookies.get("user"))?.role_id 
-  // console.log(roleId , Cookies.get("user"))
+  // console.log(Cookies.get("user")) 
+
   const [hoveredItem, setHoveredItem] = useState(null);
   const dispatch = useDispatch();
 
@@ -248,18 +249,15 @@ function HeaderNavbar() {
           آموزش ورود
         </Link>
       </li>
-      {/* {
-        roleId !== '' && roleId === 1 || roleId === 5 
-        ? <li>
+
+      <li>
         <Link
           to="/recruitment"
           className="text-[#171717] font-[shabnamMedium] text-sm cursor-pointer"
         >
           استخدام
         </Link>
-      </li> : null
-      } */}
-      
+      </li>
       <li
         className="flex items-center gap-x-1 relative"
         onMouseEnter={clickEnterShowSlide3}
