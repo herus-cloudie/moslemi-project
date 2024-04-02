@@ -17,7 +17,7 @@ function Main() {
     const discountIds = discounts.map(discount => discount.product_id);
     const Ids = baskets.map(basket => basket.product_id);
     let goalProducts = products.filter(product => Ids.includes(product.id));
-    const userId = JSON.parse(Cookies.get("user"))?.id;
+    const userId = JSON.parse(Cookies.get("user"))?.id ;
     const dispatch = useDispatch();
     const location = useLocation();
     const urlPath = location.pathname;

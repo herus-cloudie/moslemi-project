@@ -62,7 +62,7 @@ function Edit({ details, setShowDetails, users, categories }) {
 
     const dataObj = {
       title: titleRef.current.value,
-      category_id: JSON.parse(dropCate.id),
+      category_id: JSON.parse(dropCate.id) || undefined,
       description: desc,
       price: priceRef.current.value.replaceAll(",", ""),
       confirm: JSON.parse(confirmRef.current.value),

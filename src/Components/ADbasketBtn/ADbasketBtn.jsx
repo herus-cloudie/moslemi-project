@@ -5,7 +5,7 @@ import { GiBasket } from 'react-icons/gi';
 import { useDispatch } from 'react-redux';
 
 function ADbasketBtn({ productId }) {
-    const userId = JSON.parse(Cookies.get('user')).id;
+    const userId = JSON.parse(Cookies.get('user'))?.id;
     const dispatch = useDispatch();
     
     const addToBasket = () => {

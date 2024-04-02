@@ -29,7 +29,7 @@ function NewCoupon() {
     let dataObj = {
       coupon_value: couponValueRef.current.value,
       coupon_type: couponTypeRef.current.value,
-      user_id: JSON.parse(userIdRef.current.value),
+      user_id: JSON.parse(userIdRef.current.value) || undefined,
     };
 
     switch (true) {

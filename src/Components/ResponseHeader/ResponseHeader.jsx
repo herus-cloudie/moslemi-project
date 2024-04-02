@@ -13,7 +13,7 @@ import ScrollTop from "../ScrollTop/ScrollTop";
 import UserAvatarIcon from "../UserAvatar/UserAvatar";
 
 const ResponseHeader = () => {
-  const [dropMenu,setDropMenu] = useState(false);
+  const [dropMenu,setDropMenu] = useState(false); 
   const [dropSearchBox,setDropSearchBox] = useState(false);
   const loginStatus = useSelector(state => state.authentication.loginStatus);
   const baskets = useSelector(state => state.cart.baskets);

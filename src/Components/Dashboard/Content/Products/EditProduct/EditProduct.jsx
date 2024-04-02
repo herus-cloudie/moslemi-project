@@ -35,7 +35,7 @@ function EditProduct({ isEdit , setIsEdit }) {
             category_id:dropCate.id,
             price:priceValue.replaceAll(',',''),
             description:desc,
-            userId : JSON.parse(Cookies.get("user")).id
+            userId : JSON.parse(Cookies.get("user")).id || undefined
         }
         switch(true)
         {

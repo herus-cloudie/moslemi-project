@@ -34,7 +34,7 @@ function EditArticle() {
             image:imageName,
             body:desc,
             is_active:JSON.parse(situationRef.current.value),
-            user_id:JSON.parse(Cookies.get('user')).id,
+            user_id:JSON.parse(Cookies.get('user')).id || undefined,
         }
         switch(true)
         {

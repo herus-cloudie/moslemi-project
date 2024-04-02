@@ -26,7 +26,7 @@ function NewBanner() {
         e.preventDefault()
         const formData = {
             title: titleRef.current.value,
-            user_id: JSON.parse(Cookies.get('user')).id,
+            user_id: JSON.parse(Cookies.get('user')).id || undefined,
             image:imageName
         }
         switch(true)
