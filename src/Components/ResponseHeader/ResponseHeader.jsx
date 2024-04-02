@@ -78,7 +78,7 @@ const ResponseHeader = () => {
                 <AiOutlineHeart className="text-2xl text-[#8E8C8C] font-thin" />
                 <span className="absolute top-[-12px] left-[-10px] bg-orange-400 text-xs font-[shabnamBold] p-1 text-white min-w-[20px] h-[20px] flex justify-center items-center rounded-full">
                   {
-                    favArticlesID.length + favProductsID.length 
+                    // favArticlesID.length + favProductsID.length 
                   }
                 </span>
               </Link>

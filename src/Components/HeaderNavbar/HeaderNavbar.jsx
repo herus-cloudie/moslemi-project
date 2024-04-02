@@ -19,7 +19,8 @@ function HeaderNavbar() {
     (state) => state.dashboard.workSampleCategories
   );
   
-  const roleId = JSON.parse(Cookies.get("user"))?.role_id 
+  // const roleId = JSON.parse(Cookies.get("user"))?.role_id 
+  // console.log(roleId , Cookies.get("user"))
   const [hoveredItem, setHoveredItem] = useState(null);
   const dispatch = useDispatch();
 
@@ -247,7 +248,7 @@ function HeaderNavbar() {
           آموزش ورود
         </Link>
       </li>
-      {
+      {/* {
         roleId !== '' && roleId === 1 || roleId === 5 
         ? <li>
         <Link
@@ -257,7 +258,7 @@ function HeaderNavbar() {
           استخدام
         </Link>
       </li> : null
-      }
+      } */}
       
       <li
         className="flex items-center gap-x-1 relative"
