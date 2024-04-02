@@ -3,6 +3,7 @@ import { MdKeyboardArrowLeft } from "react-icons/md";
 import { RiArrowDownSLine } from "react-icons/ri";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import Cookies from "js-cookie";
 import {
   getWorkSample,
   getWorkSampleCategories,
@@ -12,17 +13,19 @@ function HeaderNavbar() {
   const [showSlide11, setShowSlide11] = useState(false);
   const [showSlide2, setShowSlide2] = useState(false);
   const [showSlide3, setShowSlide3] = useState(false);
+
   const menuData = useSelector((state) => state.dashboard.categories);
   const workSampleCategories = useSelector(
     (state) => state.dashboard.workSampleCategories
   );
+  
+  const roleId = JSON.parse(Cookies.get("user"))?.role_id 
   const [hoveredItem, setHoveredItem] = useState(null);
   const dispatch = useDispatch();
-console.log("its menu data : ",workSampleCategories);
+  
   useEffect(() => {
     dispatch(getWorkSample());
     dispatch(getWorkSampleCategories());
-    // console.log(workSampleCategories);
   }, []);
   const clickEnterShowSlide11 = (itemId) => {
     setShowSlide11(true);
@@ -244,14 +247,18 @@ console.log("its menu data : ",workSampleCategories);
           آموزش ورود
         </Link>
       </li>
-      <li>
+      {
+        roleId !== '' && roleId === 1 || roleId === 5 
+        ? <li>
         <Link
           to="/recruitment"
           className="text-[#171717] font-[shabnamMedium] text-sm cursor-pointer"
         >
           استخدام
         </Link>
-      </li>
+      </li> : null
+      }
+      
       <li
         className="flex items-center gap-x-1 relative"
         onMouseEnter={clickEnterShowSlide3}

@@ -36,14 +36,14 @@ const Recruitment = () => {
     };
     if (dataObj.phone < 12) {
       toast.warn("شماره تلفن را درست وارد نشده است  ");
-    } else if (!dataObj.birthday.length < 1) {
-      dispatch(sendRecruitment(dataObj));
-    } else {
+    } else if (dataObj.birthday.length < 1) {
       toast.warn("تاریخ تولد را وارد کنید");
-    }
-    if (dataObj.code_melli < 11) {
+    } else if (dataObj.code_melli < 11) {
       toast.warn("کد ملی را درست  وارد کنید");
+    } else {
+      dispatch(sendRecruitment(dataObj));
     }
+    
   };
   useEffect(() => {
     const storedToken = localStorage.getItem("access_token");
@@ -274,7 +274,7 @@ const Recruitment = () => {
                           className="w-[20px] mx-auto"
                         />
                       ) : (
-                        <span className="font-[shabnamBold]">ثبت</span>
+                        <span  className="font-[shabnamBold]">ثبت</span>
                       )}
                     </button>
                   </div>
