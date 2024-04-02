@@ -27,6 +27,9 @@ function Edit({ details, setShowDetails, users, categories }) {
   const statusRef = useRef();
   const confirmRef = useRef();
   const progressRef = useRef();
+  
+
+  console.log({details , users , categories})
 
   const usersall = useSelector((state) => state.dashboard.users);
   useEffect(() => {

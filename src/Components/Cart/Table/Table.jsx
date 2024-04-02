@@ -8,9 +8,9 @@ const Table = ({ goalProducts , discounts , discountIds }) => {
       <table className="border border-gray-200 text-sm w-full min-w-300 flex flex-col">
         <thead className="w-full">
         <tr className="text-gray-500 bg-gray-200 hidden lg:flex w-full justify-between px-5">
-          <th className="p-2">محصول</th>
+          <th className="p-2 font-[shabnamlight]">محصول</th>
           <div className="flex items-center gap-3 2xl:gap-16 xl:gap-12 lg:gap-12">
-            <th className="p-2">قیمت</th>
+            <th className="p-2 font-[shabnamlight]">قیمت</th>
           </div>
         </tr>
         </thead>

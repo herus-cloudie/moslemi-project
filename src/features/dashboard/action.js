@@ -394,6 +394,8 @@ export const choiceEmployee = createAsyncThunk(
     const response = await instance.post(`/choiceRecruitment/${user}`, {
       status,
     });
+    console.log(user , status)
+    return response
   }
 );
 

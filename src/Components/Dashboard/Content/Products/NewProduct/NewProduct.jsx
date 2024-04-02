@@ -68,7 +68,7 @@ function NewProduct() {
         toast.warn("عنوان را وارد کنید");
         break;
       case form.title.length < 3:
-        toast.warn("عنوان کوتاه است");
+        toast.warn("عنوان باید بیتشر از 3 کاراکتر باشد");
         break;
       case imageName === "":
         toast.warn("فایل تصویر را وارد کنید");
@@ -84,6 +84,9 @@ function NewProduct() {
         break;
       case form.price === 0:
         toast.warn("قیمت را وارد کنید");
+        break;
+        case form.price < 1000:
+        toast.warn("قیمت باید بیتشر از 1000ت باشد");
         break;
       default:
         sendProduct(form);

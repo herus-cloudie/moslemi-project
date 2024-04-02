@@ -62,7 +62,43 @@ function Main() {
       baskets.length > 0 ?
         <section className={urlPath === '/userPage/cart' ? "container mx-auto bg-white" : "container w-[90%] mx-auto bg-white p-7 my-10"} style={{boxShadow:urlPath === '/userPage/cart' ? '0px 0px 0px 0px' : '0px 0px 8px -3px grey'}}>
           <Table goalProducts={goalProducts} discounts={discounts} discountIds={discountIds}/>
-          <div className="sm:flex flex-row gap-4 items-center justify-end w-full mt-4">
+          <div className='flex flex-col justify-between mt-6 md:flex-row'>
+            <div className="relative md:w-2/5 w-full mt-4 ">
+              <label className='font-[shabnamlight]'>
+                نام و نام خانوادگی
+              </label>
+              <input
+                onChange={(event) => console.log(event.target.value)}
+                // value={''}
+                type="text"
+                className="block border-2 font-[shabnamlight] w-full p-4 sm:pe-36 text-sm text-black-900 border border-gray-400 rounded"
+              />
+            </div>
+            <div className="relative md:w-2/5 w-full mt-4 ">
+            <label className='font-[shabnamlight]'>
+            ایمیل (اختیاری)
+              </label>
+              <input
+                onChange={(event) => console.log(event.target.value)}
+                // value={''}
+                type="text"
+                className="block border-2 font-[shabnamlight] w-full p-4 sm:pe-36 text-sm text-black-900 border border-gray-400 rounded"
+              />
+            </div>
+            
+          </div>
+          <div className="relative w-full mx-auto mt-4 md:mt-10">
+              <label className='font-[shabnamlight]'>
+               آدرس
+              </label>
+              <input
+                onChange={(event) => console.log(event.target.value)}
+                // value={''}
+                type="text"
+                className="block border-2 font-[shabnamlight] w-full p-4 sm:pe-36 text-sm text-black-900 border border-gray-400 rounded"
+              />
+            </div>
+          <div className="sm:flex flex-row gap-4 items-center justify-end w-full mt-20">
             <DiscountForm/>
           </div>
           <p className="font-black text-gray-600 mt-12">جمع کل سبد خرید</p>
@@ -78,9 +114,9 @@ function Main() {
           </div>
           <button
             onClick={orderHandle}
-            className="mt-4 sm:mb-0 basis-full cursor-pointer sm:basis-1/2 lg:basis-1/4 xl:basis-1/6 text-white py-3 font-bold w-full bg-blue-500 hover:bg-blue-600 px-3 rounded"
+            className="mt-4 sm:mb-0 font-[shabnamlight] basis-full cursor-pointer sm:basis-1/2 lg:basis-1/4 xl:basis-1/6 text-white py-3 font-bold w-full bg-blue-500 hover:bg-blue-600 px-3 rounded"
           >
-             ثبت سفارش
+             ثبت سفارش و پرداخت 
           </button>
         </section> :
         <section className="container mx-auto font-[shabnam] bg-white shadow-black/5 p-16 my-10 shadow-xl text-center">
