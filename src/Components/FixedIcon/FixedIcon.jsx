@@ -9,11 +9,12 @@ import { getBasketsByUserId } from "../../features/cart/action";
 const FixedIcon = () => {
   const baskets = useSelector(state => state.cart.baskets);
   const loginStatus = useSelector(state => state.authentication.loginStatus);
-  const userId = loginStatus ? JSON.parse(Cookies.get("user"))?.id  : '';
-  const dispatch = useDispatch();
-
+  
+  // const userId = loginStatus ? JSON.parse(Cookies.get("user"))?.id  : '';
+  // const dispatch = useDispatch();
+  // console.log(loginStatus , userId)
   useEffect(() => {
-    dispatch(getBasketsByUserId(userId));
+    // dispatch(getBasketsByUserId(userId));
   },[])
 
   return (

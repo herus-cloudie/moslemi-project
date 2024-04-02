@@ -27,7 +27,7 @@ function Product() {
     const loading = useSelector(state => state.cart.loading);
     const loginStatus = useSelector(state => state.authentication.loginStatus);
     const params = useParams();
-    const goalId = JSON.parse(params.id) || undefined;
+    const goalId = JSON.parse(params.id);
     const goalProduct = products?.find(product => product.id === goalId);
     const dispatch = useDispatch();
 

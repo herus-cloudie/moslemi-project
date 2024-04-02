@@ -16,7 +16,7 @@ function NewProduct() {
     value: null,
     id: null,
   });
-  const userId = JSON.parse(Cookies.get("user")).id || undefined;
+  const userId = JSON.parse(Cookies.get("user")).id;
   const titleRef = useRef();
   const imageRef = useRef();
   const fileRef = useRef();

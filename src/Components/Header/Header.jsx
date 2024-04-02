@@ -20,6 +20,7 @@ const Header = () => {
   );
   const success = useSelector((state) => state.cart.success);
   const roleId = loginStatus ? JSON.parse(Cookies.get("user"))?.role_id : "";
+  
   const userId = loginStatus ? JSON.parse(Cookies.get("user"))?.id : "";
   const dispatch = useDispatch();
   const location = useLocation();

@@ -6,7 +6,7 @@ import { toast } from 'react-toastify';
 
 function BeSellerComponent() {
     const loading = useSelector(state => state.dashboard.sellerLoading);
-    const userInfo = JSON.parse(Cookies.get("user")) || undefined ;
+    const userInfo = JSON.parse(Cookies.get("user")) ;
     const dispatch = useDispatch();
   
     const sendForm = e => {

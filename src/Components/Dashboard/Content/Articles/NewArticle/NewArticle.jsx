@@ -30,7 +30,7 @@ function NewArticle() {
       title: titleRef.current.value,
       body: desc,
       is_active: JSON.parse(situationRef.current.value),
-      user_id: JSON.parse(Cookies.get("user")).id || undefined ,
+      user_id: JSON.parse(Cookies.get("user")).id,
       image: imageName,
     };
     console.log(formData.body)

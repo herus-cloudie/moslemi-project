@@ -10,7 +10,7 @@ import Cookies from 'js-cookie';
 function EmployeeDetails({ setShowDetails , showDetails }) {
     const roles = useSelector(state => state.dashboard.roles);
     const loading = useSelector(state => state.userPanel.isLoading);
-    const userInfo = JSON.parse(Cookies.get("user")) || undefined;
+    const userInfo = JSON.parse(Cookies.get("user"));
     const userRole = roles.find(role => role.id === showDetails.role_id)
     const [role,setRole] = useState(userRole?.title);
     let loginDate = showDetails.created_at;

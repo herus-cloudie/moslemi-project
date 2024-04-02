@@ -11,7 +11,7 @@ function Blogs({ currentItems }) {
     const [favorites,setFavorites] = useState([]);
 
     useEffect(() => {
-        const list = JSON.parse(localStorage.getItem('favArticles')) || undefined;
+        const list = JSON.parse(localStorage.getItem('favArticles'));
         if(list) {
           setFavorites(list); 
         }

@@ -8,7 +8,7 @@ import { getNewsById } from '../../features/news/action';
 
 function NewsComponent() {
     const params = useParams();
-    const Id = JSON.parse(params.id) || undefined;
+    const Id = JSON.parse(params.id) ;
     const goalNews = useSelector(state => state.news.goalNews);
     const isLoading = useSelector(state => state.news.loading);
     const dispatch = useDispatch();

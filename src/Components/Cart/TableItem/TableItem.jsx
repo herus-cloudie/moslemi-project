@@ -12,7 +12,7 @@ const TableItem = ({ cartItem , discounts , discountIds }) => {
   const dispatch = useDispatch();
   const baskets = useSelector(state => state.cart.baskets);
   const loading = useSelector(state => state.cart.loading);
-  const userId = JSON.parse(Cookies.get("user")).id || undefined;
+  const userId = JSON.parse(Cookies.get("user")).id;
   const goalId = baskets.find(basket => basket.product_id === cartItem.id && basket.user_id === userId )?.id;
   let created_date = moment(cartItem.created_at);
   let updated_date = moment(cartItem.updated_at);

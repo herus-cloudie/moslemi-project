@@ -48,7 +48,7 @@ function New() {
       status: statusRef.current.value,
       progress: progressRef.current.value,
       confirm: confirmRef.current.value,
-      user_id : JSON.parse(Cookies.get('user')).id || undefined
+      user_id : JSON.parse(Cookies.get('user')).id 
     };
 
   // const formSubmitter = (e) => {
