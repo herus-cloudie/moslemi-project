@@ -7,12 +7,13 @@ import { deleteWorkSample } from '../../../../../features/dashboard/action';
 function AllWorkSamples({  currentItems , setShowDetails , users , categories }) {
   const mobile = window.innerWidth < 768 ? true : false;
   const dispatch = useDispatch();
+  // console.log(currentItems)
   function deleteWorkSamples(id){
     dispatch(deleteWorkSample(id));
   }
   return (
     <div className='w-full flex 2xl:w-[70%] flex-col gap-5 mb-5'>
-            <span className='w-full text-white font-bold'>تعدادنمونه کار ها ( {currentItems !== null ? currentItems.length : 'NaN'} )</span>
+            <span className='w-full text-white font-bold'>تعداد نمونه کار ها ( {currentItems !== null ? currentItems.length : 'NaN'} )</span>
             <div className='w-full flex flex-row flex-wrap justify-center md:justify-start md:flex-col items-center gap-10 md:gap-3'>
                 {
                     currentItems.map((worksample,index) => (

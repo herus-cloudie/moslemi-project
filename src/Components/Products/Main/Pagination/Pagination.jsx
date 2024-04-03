@@ -20,7 +20,7 @@ function Pagination() {
     const isLoading = useSelector(state => state.products.isLoading);
     const LoadingStatus = useSelector(state => state.cart.loading);
     const endOffset = itemOffset + itemsPerPage;
-    const currentItems = reversedProducts.toReversed().slice(itemOffset, endOffset);
+    const currentItems = reversedProducts.slice(itemOffset, endOffset);
     const pageCount = Math.ceil(reversedProducts.length / itemsPerPage);
     const userId = loginStatus ? JSON.parse(Cookies.get("user"))?.id  : '';
   

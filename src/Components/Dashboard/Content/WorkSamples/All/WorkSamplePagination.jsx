@@ -30,7 +30,6 @@ function WorkSamplePagination() {
         dispatch(getWorkSampleCategories())
         dispatch(getworkSampleGalleries())
     },[showDetails.status])
-    
   return (
     <>
     {
@@ -61,7 +60,7 @@ function WorkSamplePagination() {
             />
             </>
             :
-            <EditWorkSamples details={showDetails.value} setShowDetails={setShowDetails} categories={workSampleCategories} workSampleGalleries ={workSampleGalleries}/>
+            <EditWorkSamples details={showDetails.value} setShowDetails={setShowDetails} categories={workSampleCategories} workSampleGalleries={workSampleGalleries}/>
         }
         </>
     }

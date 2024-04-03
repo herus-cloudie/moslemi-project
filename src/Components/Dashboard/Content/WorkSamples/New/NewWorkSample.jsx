@@ -70,7 +70,6 @@ function NewWorkSample() {
         dispatch(addWorkSample(dataObj))
     }
 
-
   return (
     <>
    { 
@@ -93,9 +92,9 @@ function NewWorkSample() {
                 <select id="workSampleCategory" ref={workSampleCategoryRef} className='py-1'>
                     <option value="null">{"..."}</option>
                     {
-                        workSampleCategories.map(work => (
-                            <option value={work.id}>{work.title}</option>
-                        ))
+                        // workSampleCategories.map(work => ( console.log(work)
+                        //     // <option value={work.id}>{work.title}</option>
+                        // ))
                     }
                 </select>
                 <button onClick={()=>{setAddCategory(true)}} className='w-[100%] bg-[#07C7A3] transition-all duration-300 hover:shadow-[0px_0px_5px_1px_rgba(0,0,0,0.2)] hover:bg-[#0eecc3] text-white py-1 rounded-sm w-[20%] '>

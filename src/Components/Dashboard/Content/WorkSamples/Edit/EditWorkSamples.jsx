@@ -11,7 +11,11 @@ import NewWorkSampleGallery from '../New/NewWorkSampleGallery';
 
 function EditWorkSamples({ details , setShowDetails , categories}) {
     // console.log(details);
-    const [dropCate,setDropCate] = useState({status:false,value:categories.find(cate => cate.id === details.category_id)?.title,id:categories.find(cate => cate.id === details.category_id)?.id})
+    const [dropCate,setDropCate] = useState({
+        status : false,
+        value : categories.find(cate => cate.id === details.category_id)?.title,
+        id : categories.find(cate => cate.id === details.category_id)?.id
+})
     const [desc,setDesc] = useState(details?.description);
     const loading = useSelector(state => state.dashboard.workSamplesLoading);
     const workSampleGalleriesDetail = useSelector(state => state.dashboard.workSampleGalleriesDetail);
@@ -19,6 +23,7 @@ function EditWorkSamples({ details , setShowDetails , categories}) {
     const titleRef = useRef();
     const categoryRef  = useRef();
     const [addGalleries , setAddGalleries] = useState(false)
+    console.log(workSampleGalleriesDetail)
     useEffect(()=>{
         dispatch(getworkSampleGalleriesDetail(details.id))
         
@@ -57,7 +62,8 @@ function EditWorkSamples({ details , setShowDetails , categories}) {
     }
 
     const sendWorkSamples = (dataObj) => {
-        dispatch(editWorkSample(dataObj))
+        console.log(dataObj)
+        // dispatch(editWorkSample(dataObj))
     }
 
   return (

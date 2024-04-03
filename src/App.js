@@ -88,8 +88,13 @@ const App = () => {
           <Route path="/order" element={<Order />} />
           <Route path="/recruitment" element={<Recruitment />} />
           <Route path="/LoginLearn" element={<LoginLearn />} />
+
+          { /* نمونه کارررررررررررررررررررررررررررررررررررررررررررررررررررررررر*/}
+
           <Route path="/workSamples/:id/:name" element={<MotionGraphics />} />
-          <Route path="/:id/:name" element={<WorkSampleGallery />} />
+          
+          {/* <Route path="/:id/:name" element={<WorkSampleGallery />} /> */}
+
           {/* <Route path="workSamples/graphic/UI_UX" element={<UI_UX />} />
           <Route path="workSamples/graphic/Brochure" element={<Brochure />} />
           <Route path="workSamples/graphic/Poster" element={<Poster />} />
@@ -101,6 +106,9 @@ const App = () => {
           <Route path="workSamples/Application" element={<Application />} />
           <Route path="workSamples/Seo" element={<Seo />} />
           <Route path="workSamples/Voicing" element={<Voicing />} /> */}
+
+          { /* نمونه کارررررررررررررررررررررررررررررررررررررررررررررررررررررررر*/}
+        
           <Route path="/services/اپلیکیشن-موبایل" element={<SApplication />} />
           <Route path="/services/خدمات-تدوین-صدا-و-صدا-گذاری" element={<SSoundEditing />}/>
           <Route path="/services/فروش-سایت-اختصاصی-و-اقتصادی" element={<EcoSaleWeb />}/>

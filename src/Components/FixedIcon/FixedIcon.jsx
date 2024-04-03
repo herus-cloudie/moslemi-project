@@ -12,7 +12,7 @@ const FixedIcon = () => {
   
   const userId = loginStatus ? JSON.parse(Cookies.get("user"))?.id  : '';
   const dispatch = useDispatch();
-  console.log(loginStatus , userId)
+  
   useEffect(() => {
     dispatch(getBasketsByUserId(userId));
   },[])

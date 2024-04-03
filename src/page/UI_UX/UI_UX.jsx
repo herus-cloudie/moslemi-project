@@ -1,11 +1,24 @@
-import React from "react";
+import React, { useEffect } from "react";
 import FixedIcon from "../../Components/FixedIcon/FixedIcon";
 import Footer from "../../Components/Footer/Footer";
 import Header from "../../Components/Header/Header";
 import ResponseHeader from "../../Components/ResponseHeader/ResponseHeader";
 import { Helmet } from "react-helmet";
+import { useDispatch, useSelector } from "react-redux";
+import { getworkSampleGalleries } from "../../features/dashboard/action";
 
 const UI_UX = () => {
+  let dispatch = useDispatch()
+
+  useEffect(()=> {
+    dispatch(getworkSampleGalleries())
+},[])
+
+  const workSamples = useSelector(state => state.dashboard.workSample);
+  const workSampleCategories = useSelector(state => state.dashboard.workSampleCategories);
+  const workSampleGalleries = useSelector(state => state.dashboard.workSampleGalleries)
+  // const currentItems = workSamples.toReversed().slice(itemOffset, endOffset);
+  console.log(workSamples ,workSampleCategories , workSampleGalleries)
   return (
     <main>
       <Helmet>

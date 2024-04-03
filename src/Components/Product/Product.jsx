@@ -84,12 +84,13 @@ function Product() {
       </main>
         {
             loginStatus
-            ?
-            <ADbasketBtn productId={goalProduct?.id}/>
-            :
-            <Link to={"/login"} className='fixed bottom-0 items-center w-[100vw] text-white font-bold px-3 py-3 transition-all hover:bg-[#4FC0D0]  2xl:py-5 flex justify-center gap-2 bg-[#3facba] z-[49]'>
-              <span>برای خرید محصولات ابتدا باید در سایت عضو شوید</span>
-            </Link>
+            // ?
+            // <ADbasketBtn productId={goalProduct?.id}/>
+            // :
+            // <Link to={"/login"} className='fixed bottom-0 items-center w-[100vw] text-white font-bold px-3 py-3
+            //  transition-all hover:bg-[#4FC0D0]  2xl:py-5 flex justify-center gap-2 bg-[#3facba] z-[49]'>
+            //   <span>برای خرید محصولات ابتدا باید در سایت عضو شوید</span>
+            // </Link>
           }
       <footer>
           <Footer/>
