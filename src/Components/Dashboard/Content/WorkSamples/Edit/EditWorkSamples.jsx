@@ -62,8 +62,7 @@ function EditWorkSamples({ details , setShowDetails , categories}) {
     }
 
     const sendWorkSamples = (dataObj) => {
-        console.log(dataObj)
-        // dispatch(editWorkSample(dataObj))
+        dispatch(editWorkSample(dataObj))
     }
 
   return (
